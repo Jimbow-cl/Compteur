@@ -18,6 +18,8 @@ function App() {
       return state / 2;
     } else if (action === "reset") {
       return state = 0;
+    } else if (action === "random") {
+      return state = Math.floor(Math.random() * 900);
     }
   }
   return (
@@ -34,6 +36,8 @@ function App() {
           updateCount("puissance")}>count x count</button>
         <button onClick={() =>
           updateCount("divide")}>/ 2</button>
+        <button onClick={() =>
+          updateCount("random")}>Random?</button>
         <button onClick={() =>
           updateCount("reset")}>Reset</button>
       </div>
